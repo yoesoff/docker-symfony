@@ -1,8 +1,6 @@
 docker-symfony
 ==============
 
-[![Build Status](https://secure.travis-ci.org/eko/docker-symfony.png?branch=master)](http://travis-ci.org/eko/docker-symfony)
-
 
 This is a complete stack for running Symfony 4 (latest version: Flex) into Docker containers using docker-compose tool.
 
@@ -11,7 +9,7 @@ This is a complete stack for running Symfony 4 (latest version: Flex) into Docke
 First, clone this repository:
 
 ```bash
-$ git clone https://github.com/eko/docker-symfony.git
+$ git clone https://github.com/yoesoff/docker-symfony.git
 ```
 
 Next, put your Symfony application into `symfony` folder and do not forget to add `symfony.localhost` in your `/etc/hosts` file.
