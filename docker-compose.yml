@@ -4,7 +4,7 @@ services:
         image: mysql
         command: ["--default-authentication-plugin=mysql_native_password"]
         ports:
-            - "3306:3306"
+            - "3396:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: symfony
@@ -13,7 +13,7 @@ services:
     php:
         build: ./php-fpm
         ports:
-            - "9000:9001"
+            - "9991:9001"
         volumes:
             - ./symfony:/var/www/symfony:cached
             - ./logs/symfony:/var/www/symfony/var/log:cached
@@ -24,7 +24,7 @@ services:
     nginx:
         build: ./nginx
         ports:
-            - "80:80"
+            - "90:80"
         links:
             - php
         volumes:
@@ -33,7 +33,7 @@ services:
     elk:
         image: willdurand/elk
         ports:
-            - "81:80"
+            - "91:80"
         volumes:
             - ./elk/logstash:/etc/logstash:cached
             - ./elk/logstash/patterns:/opt/logstash/patterns:cached
